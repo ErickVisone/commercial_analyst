@@ -39,14 +39,14 @@ insert into staging_procfit.dbo.st_product (
     ,marca
 	)
 select
-    pr.produto                                      as produto
-    ,pr.descricao                                   as descricao
-    ,pr.descricao_reduzida                          as descricao_reduzida
-    ,pr.familia_produto                             as familia
-    ,sp.secao_produto                               as secao
-    ,gp.grupo_produto                               as grupo
-    ,sg.subgrupo_produto                            as sub_grupo
-    ,ma.descricao                                   as marca
+    pr.produto                                      as cd_product
+    ,pr.descricao                                   as description
+    ,pr.descricao_reduzida                          as short_description
+    ,fp.descricao                                   as family
+    ,sp.descricao                                   as section
+    ,gp.descricao                                   as group_name
+    ,sg.descricao                                   as subgrup_name
+    ,ma.descricao                                   as brand
 from procfit.dbo.produtos                            pr
 left join procfit.dbo.familias_produtos              fp
     on pr.familia_produto = fp.familia_produto
