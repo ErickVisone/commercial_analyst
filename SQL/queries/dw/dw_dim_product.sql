@@ -2,7 +2,7 @@
 if object_id('dw_procfit.dbo.dim_product') is null
 begin
 	create table dw_procfit.dbo.dim_product (
-        cd_product              numeric(15)
+        cd_product              numeric(15) primary key
         ,description            varchar(100)
         ,short_description      varchar(60)
         ,family                 varchar(80)

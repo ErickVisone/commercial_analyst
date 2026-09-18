@@ -12,7 +12,7 @@ begin
         ,cod_vendedor            numeric(15)
         ,movimento               date
         ,cod_produto             numeric(15)
-        ,quantidade              money
+        ,quantidade              int
         ,venda_bruta             money
         ,desconto                money
         ,venda_liquida           money
