@@ -1,0 +1,324 @@
+table vw_calendar
+	lineageTag: 42205b8f-6723-4cc2-b8c2-c3a420ae89ac
+	dataCategory: Time
+
+	column date
+		dataType: dateTime
+		isKey
+		formatString: Long Date
+		lineageTag: d094a338-9160-4b7b-b368-95cf0922375b
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 292ab1e1-1af5-41b5-a8d7-0ee5cb8f3142
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_of_year
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a8543042-7d2b-4904-bc86-4fcb816c8fcc
+		summarizeBy: none
+		sourceColumn: start_of_year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column end_of_year
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c18f9e8d-b5b8-47cf-b5c0-26fed1481970
+		summarizeBy: none
+		sourceColumn: end_of_year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ebea8de-cce1-4890-84fc-5640ec8bc8ac
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column star_of_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ae0578ae-c11c-4585-a053-f19c21f41e92
+		summarizeBy: none
+		sourceColumn: star_of_month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column end_of_month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f73732df-d3e9-4d95-b4bb-808e7b24f6a4
+		summarizeBy: none
+		sourceColumn: end_of_month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column day_in_month
+		dataType: int64
+		formatString: 0
+		lineageTag: b2c35748-ee1b-48f8-91ed-281feea6a787
+		summarizeBy: sum
+		sourceColumn: day_in_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_month_number
+		dataType: int64
+		formatString: 0
+		lineageTag: dd57e208-0374-43e1-a294-b4d3cbb2f2ff
+		summarizeBy: sum
+		sourceColumn: year_month_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_month_name
+		dataType: string
+		lineageTag: 8023304e-70bf-4ef1-9b47-0a98d222da26
+		summarizeBy: none
+		sourceColumn: year_month_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column day
+		dataType: int64
+		formatString: 0
+		lineageTag: be6068fc-c03d-45e1-9f23-c5679faddc4b
+		summarizeBy: sum
+		sourceColumn: day
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_name
+		dataType: string
+		lineageTag: 15583e7d-adfb-4ec4-bc58-a9d797cac04e
+		summarizeBy: none
+		sourceColumn: day_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_name_short
+		dataType: string
+		lineageTag: 0666d6e6-9391-4bd6-8370-bb621f191b4e
+		summarizeBy: none
+		sourceColumn: day_name_short
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_of_week
+		dataType: int64
+		formatString: 0
+		lineageTag: 39a4fe72-5211-4203-b2b4-ee6e7e5d5484
+		summarizeBy: sum
+		sourceColumn: day_of_week
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_of_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 1fc1257f-6704-4582-92be-87484cbdad05
+		summarizeBy: sum
+		sourceColumn: day_of_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_name
+		dataType: string
+		lineageTag: 5688622f-22dd-4b34-b2a5-b65c34bf2c8f
+		summarizeBy: none
+		sourceColumn: month_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_name_short
+		dataType: string
+		lineageTag: 05622d6a-0e02-4297-bf40-cabf49128c0e
+		summarizeBy: none
+		sourceColumn: month_name_short
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b49c54a-d8b8-42d3-a8a3-ab2b62a15428
+		summarizeBy: sum
+		sourceColumn: quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter_name
+		dataType: string
+		lineageTag: 62038c67-d0cc-40b8-8cb2-20d0eafed5aa
+		summarizeBy: none
+		sourceColumn: quarter_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_quarter_number
+		dataType: int64
+		formatString: 0
+		lineageTag: 601f48d7-a2f9-4b80-a881-546e6fe47d76
+		summarizeBy: sum
+		sourceColumn: year_quarter_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_quarter_name
+		dataType: string
+		lineageTag: 8568ff70-8023-49c3-9e6f-483d95f7d99b
+		summarizeBy: none
+		sourceColumn: year_quarter_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_of_quarter
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 16820b51-3e8f-4d8b-a119-aa46b53a0b63
+		summarizeBy: none
+		sourceColumn: start_of_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column end_of_quarter
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: eed96258-29b2-4d76-99ec-32e84817af0a
+		summarizeBy: none
+		sourceColumn: end_of_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column week_of_year
+		dataType: int64
+		formatString: 0
+		lineageTag: de7f431f-9c5d-4bb8-b9a1-e4884491a6a7
+		summarizeBy: sum
+		sourceColumn: week_of_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column star_of_week
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: bfea82d6-353f-493f-bcf9-2d5d8405f663
+		summarizeBy: none
+		sourceColumn: star_of_week
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column end_of_week
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 992cd6d1-2b89-41ca-a000-bd4b6a916dc0
+		summarizeBy: none
+		sourceColumn: end_of_week
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fiscal_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 044ad821-430c-40b5-9750-2b75a33bec81
+		summarizeBy: sum
+		sourceColumn: fiscal_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 314fc901-6c50-49e5-b746-d2ffe010b5ac
+		summarizeBy: sum
+		sourceColumn: fiscal_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_month
+		dataType: int64
+		formatString: 0
+		lineageTag: 8e656af5-26b6-4434-9d5f-a529beca3037
+		summarizeBy: sum
+		sourceColumn: fiscal_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_offset
+		dataType: int64
+		formatString: 0
+		lineageTag: cceceaa9-f1bf-4972-8970-457dc48c4f03
+		summarizeBy: sum
+		sourceColumn: day_offset
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_offset
+		dataType: int64
+		formatString: 0
+		lineageTag: c4307b0d-670b-427a-bc0d-18c1f5714473
+		summarizeBy: sum
+		sourceColumn: month_offset
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter_offset
+		dataType: int64
+		formatString: 0
+		lineageTag: d0dc9259-3ba6-4a77-9e40-cc3d945d9c0c
+		summarizeBy: sum
+		sourceColumn: quarter_offset
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_offset
+		dataType: int64
+		formatString: 0
+		lineageTag: 9862748f-0ece-424f-b676-fdcaf5a83adc
+		summarizeBy: sum
+		sourceColumn: year_offset
+
+		annotation SummarizationSetBy = Automatic
+
+	partition vw_calendar = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "dw_procfit"),
+				  #"Navigation 1" = Source{[Schema = "dbo", Item = "vw_calendar"]}[Data]
+				in
+				  #"Navigation 1"
+
+	annotation PBI_ResultType = Table
+

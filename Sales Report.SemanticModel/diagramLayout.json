@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 585.986196881406,
+            "y": 580.07793228002947
+          },
+          "nodeIndex": "dim_company",
+          "nodeLineageTag": "1dfd8094-610e-48fe-b7b4-0b838594704f",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 508.70937462647817
+          },
+          "nodeIndex": "dim_customer",
+          "nodeLineageTag": "7eb35abe-b15c-4bc9-ac97-9c1b9536fd2c",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50.006291775084492,
+            "y": -50
+          },
+          "nodeIndex": "dim_product",
+          "nodeLineageTag": "8c62fb96-c99f-4453-adf5-d1671ec2b2bb",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 586.48528367414917,
+            "y": 51.7498151827416
+          },
+          "nodeIndex": "dim_seller",
+          "nodeLineageTag": "00f27e10-a87f-4e4a-8e1e-7e77189a7db0",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334.16397926224818,
+            "y": 229.91114959688628
+          },
+          "nodeIndex": "fact_sales_insights",
+          "nodeLineageTag": "d08fc24e-f590-4145-b32d-77a05e469d82",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 980.48528367414917,
+            "y": 228.35468731323914
+          },
+          "nodeIndex": "vw_calendar",
+          "nodeLineageTag": "42205b8f-6723-4cc2-b8c2-c3a420ae89ac",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

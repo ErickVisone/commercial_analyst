@@ -1,0 +1,83 @@
+table dim_product
+	lineageTag: 8c62fb96-c99f-4453-adf5-d1671ec2b2bb
+
+	column cd_product
+		dataType: double
+		isHidden
+		lineageTag: 81673411-90d2-41cc-bb07-002f24f9d42b
+		summarizeBy: none
+		sourceColumn: cd_product
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column description
+		dataType: string
+		lineageTag: 759ceb20-66a5-44ff-86d9-108bfd5bffaf
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column short_description
+		dataType: string
+		lineageTag: 591a96c6-e62b-4f53-85d0-184e6da91587
+		summarizeBy: none
+		sourceColumn: short_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column family
+		dataType: string
+		lineageTag: 26554d84-cb6d-4d62-b59c-0afc1688ac13
+		summarizeBy: none
+		sourceColumn: family
+
+		annotation SummarizationSetBy = Automatic
+
+	column section
+		dataType: string
+		lineageTag: 699323f0-f815-4db7-8d16-9ceceea668fb
+		summarizeBy: none
+		sourceColumn: section
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_name
+		dataType: string
+		lineageTag: 8da960ff-aee7-4ce7-864d-fa1fd700403c
+		summarizeBy: none
+		sourceColumn: group_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column subgrup_name
+		dataType: string
+		lineageTag: b9adb2e7-aba3-48d5-b28b-3b6bd3f01738
+		summarizeBy: none
+		sourceColumn: subgrup_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column brand
+		dataType: string
+		lineageTag: bcfa7c23-5eb8-4509-b8dc-7808a706e0c3
+		summarizeBy: none
+		sourceColumn: brand
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_product = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "dw_procfit"),
+				  #"Navigation 1" = Source{[Schema = "dbo", Item = "dim_product"]}[Data]
+				in
+				  #"Navigation 1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

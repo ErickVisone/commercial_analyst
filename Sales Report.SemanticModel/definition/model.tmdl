@@ -1,0 +1,26 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["dim_company","dim_customer","dim_product","dim_seller","fact_sales_insights","vw_calendar"]
+
+annotation PBI_RemovedChildren = [{"remoteItemId":{"foreignKeyRelationship":{"fromTableLocalLineageTag":"d08fc24e-f590-4145-b32d-77a05e469d82","fromColumnLocalLineageTag":"b6818c9f-64c3-4ac7-ad64-c5795d801a60","toTableLocalLineageTag":"1dfd8094-610e-48fe-b7b4-0b838594704f","toColumnLocalLineageTag":"cdecf653-2a16-48a8-866b-db26874ea0fd"}},"objectType":"Relationship"},{"remoteItemId":{"foreignKeyRelationship":{"fromTableLocalLineageTag":"d08fc24e-f590-4145-b32d-77a05e469d82","fromColumnLocalLineageTag":"2d1c3544-2da6-45cd-b54f-c5fd891720f7","toTableLocalLineageTag":"00f27e10-a87f-4e4a-8e1e-7e77189a7db0","toColumnLocalLineageTag":"846eff00-d2fd-4fef-bd85-844fa45daf76"}},"objectType":"Relationship"},{"remoteItemId":{"foreignKeyRelationship":{"fromTableLocalLineageTag":"d08fc24e-f590-4145-b32d-77a05e469d82","fromColumnLocalLineageTag":"0eb08ee8-7a32-444f-aeea-8dc09618ce98","toTableLocalLineageTag":"8c62fb96-c99f-4453-adf5-d1671ec2b2bb","toColumnLocalLineageTag":"81673411-90d2-41cc-bb07-002f24f9d42b"}},"objectType":"Relationship"},{"remoteItemId":{"foreignKeyRelationship":{"fromTableLocalLineageTag":"d08fc24e-f590-4145-b32d-77a05e469d82","fromColumnLocalLineageTag":"14ebc5e6-6289-4b0f-9ec1-bc018e705261","toTableLocalLineageTag":"7eb35abe-b15c-4bc9-ac97-9c1b9536fd2c","toColumnLocalLineageTag":"7fe5eb9f-2d74-4f9b-8173-5abb3e643920"}},"objectType":"Relationship"}]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_company
+ref table dim_customer
+ref table dim_product
+ref table dim_seller
+ref table fact_sales_insights
+ref table vw_calendar
+
+ref cultureInfo en-US
+

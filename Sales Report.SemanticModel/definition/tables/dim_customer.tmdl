@@ -1,0 +1,75 @@
+table dim_customer
+	lineageTag: 7eb35abe-b15c-4bc9-ac97-9c1b9536fd2c
+
+	column cd_customer
+		dataType: double
+		isHidden
+		lineageTag: 7fe5eb9f-2d74-4f9b-8173-5abb3e643920
+		summarizeBy: none
+		sourceColumn: cd_customer
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column customer_short_name
+		dataType: string
+		lineageTag: 5f6aaac1-dcf6-4f03-a874-2d076ab26afb
+		summarizeBy: none
+		sourceColumn: customer_short_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_name
+		dataType: string
+		lineageTag: 76985899-2871-4705-8331-251fd7cd2763
+		summarizeBy: none
+		sourceColumn: customer_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_type
+		dataType: string
+		lineageTag: a0f02926-baa1-4c3f-8bee-a5688c2fab2e
+		summarizeBy: none
+		sourceColumn: customer_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: 85d7b228-d24b-44a7-a508-d51f82b9df97
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_name
+		dataType: string
+		lineageTag: 53ee53f0-d146-4768-93e5-b09e851ac08d
+		summarizeBy: none
+		sourceColumn: state_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_short_name
+		dataType: string
+		lineageTag: cabf7d68-a8e4-4913-a72c-ba516163e781
+		summarizeBy: none
+		sourceColumn: state_short_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_customer = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "dw_procfit"),
+				  #"Navigation 1" = Source{[Schema = "dbo", Item = "dim_customer"]}[Data]
+				in
+				  #"Navigation 1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

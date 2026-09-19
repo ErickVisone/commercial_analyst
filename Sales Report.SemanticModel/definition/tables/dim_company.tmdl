@@ -1,0 +1,43 @@
+table dim_company
+	lineageTag: 1dfd8094-610e-48fe-b7b4-0b838594704f
+
+	column cd_company
+		dataType: double
+		isHidden
+		lineageTag: cdecf653-2a16-48a8-866b-db26874ea0fd
+		summarizeBy: none
+		sourceColumn: cd_company
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column company_name
+		dataType: string
+		lineageTag: da4f57f3-c469-4da2-8aef-b3d346290836
+		summarizeBy: none
+		sourceColumn: company_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_short_name
+		dataType: string
+		lineageTag: 8039a470-9f47-47a8-a8d6-b0ea13972e5a
+		summarizeBy: none
+		sourceColumn: company_short_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_company = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Database("localhost", "dw_procfit"),
+				  #"Navigation 1" = Source{[Schema = "dbo", Item = "dim_company"]}[Data]
+				in
+				  #"Navigation 1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

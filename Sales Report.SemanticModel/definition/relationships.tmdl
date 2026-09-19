@@ -1,0 +1,34 @@
+relationship 'Sales to Company'
+	fromCardinality: many
+	fromColumn: fact_sales_insights.cd_company
+	toCardinality: one
+	toColumn: dim_company.cd_company
+	crossFilteringBehavior: oneDirection
+
+relationship 'Sales to Customer'
+	fromCardinality: many
+	fromColumn: fact_sales_insights.cd_customer
+	toCardinality: one
+	toColumn: dim_customer.cd_customer
+	crossFilteringBehavior: oneDirection
+
+relationship 'Sales to Product'
+	fromCardinality: many
+	fromColumn: fact_sales_insights.cd_product
+	toCardinality: one
+	toColumn: dim_product.cd_product
+	crossFilteringBehavior: oneDirection
+
+relationship 'Sales to Seller'
+	fromCardinality: many
+	fromColumn: fact_sales_insights.cd_seller
+	toCardinality: one
+	toColumn: dim_seller.cd_seller
+	crossFilteringBehavior: oneDirection
+
+relationship 'Sales to Calendar'
+	fromCardinality: many
+	fromColumn: fact_sales_insights.date
+	toCardinality: one
+	toColumn: vw_calendar.date
+	crossFilteringBehavior: oneDirection
